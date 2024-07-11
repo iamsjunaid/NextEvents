@@ -1,9 +1,16 @@
 // import '../styles/global.css';
 
-export default function HomePage() {
+import { getFeaturedEvents } from "../dummy-data";
+import EventList from "../components/events/event-list";
+
+function HomePage() {
+  const events = getFeaturedEvents();
+
   return (
     <div>
-      <h1>Home Page</h1>
+      <EventList items={events} />
     </div>
   );
 }
+
+export default HomePage;
