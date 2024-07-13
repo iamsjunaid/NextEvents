@@ -1,7 +1,7 @@
 // import '../styles/global.css';
 
 import EventList from "../components/events/event-list";
-import { getAllEvents } from "../helpers/api-util";
+import { getFeaturedEvents } from "../helpers/api-util";
 
 function HomePage(props) {
   return (
@@ -12,10 +12,10 @@ function HomePage(props) {
 }
 
 export async function getStaticProps() {
-  const allEvents = await getAllEvents();
+  const FeaturedEvents = await getFeaturedEvents();
   return {
     props: {
-      events: allEvents,
+      events: FeaturedEvents,
     },
     revalidate: 30,
   };
