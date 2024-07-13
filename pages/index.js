@@ -1,16 +1,24 @@
 // import '../styles/global.css';
 
-import { getFeaturedEvents } from "../dummy-data";
 import EventList from "../components/events/event-list";
+import { getAllEvents } from "../helpers/api-util";
 
-function HomePage() {
-  const events = getFeaturedEvents();
-
+function HomePage(props) {
   return (
     <div>
-      <EventList items={events} />
+      <EventList items={props.events} />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const allEvents = await getAllEvents();
+  return {
+    props: {
+      events: allEvents,
+    },
+    revalidate: 30,
+  };
 }
 
 export default HomePage;
