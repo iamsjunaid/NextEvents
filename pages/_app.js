@@ -1,20 +1,19 @@
-import React from "react";
-import App from "next/app";
+import Head from 'next/head';
 
-import Layout from "../components/layout/layout";
-import "../styles/global.css";
+import Layout from '../components/layout/layout';
+import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
+      <Head>
+        <title>Next Events</title>
+        <meta name='description' content='NextJS Events' />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      </Head>
       <Component {...pageProps} />
     </Layout>
   );
 }
-
-MyApp.getInitialProps = async (appContext) => {
-  const appProps = await App.getInitialProps(appContext);
-  return { ...appProps };
-};
 
 export default MyApp;
