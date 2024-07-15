@@ -28,6 +28,7 @@ function AllEventsPage(props) {
           content='Find a lot of great events that allow you to evolve...'
         />
       </Head>
+
       <EventsSearch onSearch={findEventsHandler} />
       <EventList items={events} />
     </Fragment>
