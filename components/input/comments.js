@@ -8,27 +8,26 @@ function Comments(props) {
   const [showComments, setShowComments] = useState(false);
   const [comments, setComments] = useState([]);
 
+  const { eventId } = props;
+
   useEffect(() => {
     if (showComments) {
-      fetch(`/api/comments/${eventId}`)
+      fetch('/api/comments/' + eventId)
         .then((response) => response.json())
         .then((data) => setComments(data.comments));
     }
   }, [showComments]);
-
-  const { eventId } = props;
-
 
   function toggleCommentsHandler() {
     setShowComments((prevStatus) => !prevStatus);
   }
 
   function addCommentHandler(commentData) {
-    fetch(`/api/comments/${eventId}`, {
-      method: "POST",
+    fetch('/api/comments/' + eventId, {
+      method: 'POST',
       body: JSON.stringify(commentData),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     })
       .then((response) => response.json())
