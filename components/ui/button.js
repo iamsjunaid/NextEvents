@@ -1,9 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import classes from "./button.module.css";
+import classes from './button.module.css';
 
 function Button(props) {
-  console.log(props);
   if (props.link) {
     return (
       <Link href={props.link} className={classes.btn}>
