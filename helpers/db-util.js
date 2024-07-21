@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 
 export async function connectDatabase() {
   const client = await MongoClient.connect(
-    "mongodb+srv://junaidsyed:pjgvr1MWmGFd2Nix@cluster0.pmge6tn.mongodb.net/events?retryWrites=true&w=majority&appName=Cluster0"
+    "mongodb+srv://junaidsyed:uuSxCpaNRutArQ4f@cluster0.pmge6tn.mongodb.net/events?retryWrites=true&w=majority&appName=Cluster0"
   );
 
   return client;
@@ -10,6 +10,8 @@ export async function connectDatabase() {
 
 export async function insertDocument(client, collection, document) {
   const db = client.db;
+  
+  console.log(db, client, collection, document);
 
   const result = await db.collection(collection).insertOne(document);
 
@@ -23,3 +25,7 @@ export async function getAllDocuments(client, collection, sort) {
 
   return documents;
 }
+
+// mongodb+srv://junaidsyed:uuSxCpaNRutArQ4f@cluster0.ntrwp.mongodb.net/events?retryWrites=true&w=majority
+
+// mongodb+srv://junaidsyed:uuSxCpaNRutArQ4f@cluster0.pmge6tn.mongodb.net/events?retryWrites=true&w=majority&appName=Cluster0
