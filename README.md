@@ -13,6 +13,7 @@ Next Events is a web application that allows users to search for upcoming events
 - **Next.js**: A React framework used for building server-side rendering and static web applications.
 - **React**: A JavaScript library for building user interfaces.
 - **CSS**: Styling the application for a clean and responsive design.
+- **MongoDB**: Database Management for performing CRUD operations.
 - **Vercel**: Deployment platform for modern web applications.
 
 ## Getting Started
