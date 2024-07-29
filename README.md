@@ -32,12 +32,12 @@ Ensure you have the following installed on your local machine:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/next-events.git
+   git clone https://github.com/iamsjunaid/next_events.git
     ```
 2. Navigate to the project directory:
 
    ```bash
-   cd next-events
+   cd next_events
    ```
 3. Install the project dependencies:
 
@@ -50,10 +50,6 @@ Ensure you have the following installed on your local machine:
    npm run dev
    ```
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
